@@ -1,7 +1,8 @@
 ---
 title: VMWare Ubuntu24虚拟机开机黑屏,卡死解决方案
 description: 解决安装ubuntu24虚拟机登录后黑屏卡死的问题
-#cover: /cover/cover2.png
+#image: /cover/cover2.png
+category: Linux
 tags:
  - Ubuntu
  - 虚拟机

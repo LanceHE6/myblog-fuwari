@@ -1,7 +1,8 @@
 ---
 title: Golang基础知识
 description: Golang基础知识整理
-#cover: /cover/cover2.png
+#image: /cover/cover2.png
+category: GO
 tags:
  - Go 
 #sticky: 999

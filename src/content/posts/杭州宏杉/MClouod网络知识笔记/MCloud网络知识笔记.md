@@ -1,7 +1,7 @@
 ---
 title: MCloud网络知识
 description: 杭州宏杉学习笔记-MCloud网络知识
-#cover: /cover/cover2.png
+#image: /cover/cover2.png
 category: 杭州宏杉科技
 tags:
 - MCloud

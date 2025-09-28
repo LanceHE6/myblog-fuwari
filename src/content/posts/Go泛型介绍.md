@@ -1,11 +1,11 @@
 ---
 title: Go泛型介绍
 description: Go泛型介绍
-#cover: /cover/cover2.png
+#image: /cover/cover2.png
+category: GO
 tags:
  - Go 
  - 泛型
-sticky: 900
 published: 2025-01-11
 ---
 

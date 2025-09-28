@@ -1,7 +1,7 @@
 ---
 title: MCloud云平台
 description: 杭州宏杉学习笔记-MCloud云平台相关功能和知识
-#cover: /cover/cover2.png
+#image: /cover/cover2.png
 category: 杭州宏杉科技
 tags:
 - MCloud

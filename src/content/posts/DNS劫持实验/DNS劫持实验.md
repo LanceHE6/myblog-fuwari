@@ -1,7 +1,8 @@
 ---
 title: DNS劫持实验
 description: 本次实验旨在通过配置和使用 Kali Linux 中的 dnsmasq 服务，演示 DNS 劫持攻击的过程，并观察其对被攻击主机的影响
-#cover: /cover/cover2.png
+#image: /cover/cover2.png
+category: 网络
 tags:
  - DNS
 #sticky: 999

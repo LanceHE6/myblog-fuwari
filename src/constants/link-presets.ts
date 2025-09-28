@@ -2,6 +2,7 @@ import I18nKey from "@i18n/i18nKey";
 import { i18n } from "@i18n/translation";
 import { LinkPreset, type NavBarLink } from "@/types/config";
 
+// 定义路由
 export const LinkPresets: { [key in LinkPreset]: NavBarLink } = {
 	[LinkPreset.Home]: {
 		name: i18n(I18nKey.home),
@@ -14,5 +15,13 @@ export const LinkPresets: { [key in LinkPreset]: NavBarLink } = {
 	[LinkPreset.Archive]: {
 		name: i18n(I18nKey.archive),
 		url: "/archive/",
+	},
+	[LinkPreset.Tools]: {
+		name: i18n(I18nKey.tools),
+		url: "/tools/",
+	},
+	[LinkPreset.Resourses]: {
+		name: i18n(I18nKey.resources),
+		url: "/resources/",
 	},
 };

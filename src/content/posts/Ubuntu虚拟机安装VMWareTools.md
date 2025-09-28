@@ -1,9 +1,9 @@
 ---
 title: Ubuntu虚拟机安装VMWare Tools
 description: Ubuntu虚拟机安装VMWare Tools
-#cover: /cover/cover2.png
+#image: /cover/cover2.png
+category: Linux
 tags: [Ubuntu, 虚拟机]
-category: 虚拟机
 published: 2025-01-31
 ---
 

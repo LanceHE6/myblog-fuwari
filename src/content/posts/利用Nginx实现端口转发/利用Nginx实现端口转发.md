@@ -1,8 +1,7 @@
 ---
 title: 利用Nginx实现端口转发
-sticky: 2
 description: Nginx的端口转发来实现ip+端口与域名绑定
-
+category: 后端
 tags:
  - Nginx
  - 端口转发	

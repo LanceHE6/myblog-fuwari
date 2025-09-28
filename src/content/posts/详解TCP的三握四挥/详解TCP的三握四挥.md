@@ -1,10 +1,10 @@
 ---
 title: 详解TCP的三握四挥
 description: 详细解释TCP的三次握手和四次挥手
-cover: /cover/cover2.png
+image: ./cover2.png
+category: 网络
 tags:
  - TCP
-sticky: 999
 published: 2024-06-25
 ---
 

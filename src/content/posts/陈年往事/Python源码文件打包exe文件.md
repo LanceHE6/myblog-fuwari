@@ -5,7 +5,6 @@ description: 软件项目、产品版本号定义规范
 category: 陈年往事
 tags:
  - Python
- - 打包
 published: 2021-12-22
 ---
 

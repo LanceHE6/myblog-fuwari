@@ -1,7 +1,8 @@
 ---
 title: Go语言中new()和make()的区别
 description: Go语言中new()和make()的区别
-#cover: /cover/cover2.png
+#image: /cover/cover2.png
+category: GO
 tags:
  - Go 
 #sticky: 999

@@ -1,7 +1,7 @@
 ---
 title: nfs搭建
 description: 杭州宏杉学习笔记-nfs搭建
-#cover: /cover/cover2.png
+#image: /cover/cover2.png
 category: 杭州宏杉科技
 tags:
 - nfs

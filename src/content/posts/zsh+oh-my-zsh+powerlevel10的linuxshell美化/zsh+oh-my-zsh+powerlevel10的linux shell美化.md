@@ -2,9 +2,9 @@
 title: zsh+oh-my-zsh+powerlevel10的linuxshell美化
 
 description: 使用zsh+oh-my-zsh+powerlevel10获得一个好看实用的linux终端
-cover: /cover/linux_shell.png
+image: ./linux_shell.png
+category: Linux
 tags:
- - Linux
  - shell
 published: 2024-11-17
 ---

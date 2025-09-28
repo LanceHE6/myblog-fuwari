@@ -1,10 +1,10 @@
 ---
 title: 关于vue项目打包无法使用浏览器直接访问的问题
-
+# image: ./image-thhv.png
 description: 在使用GitHub Pages或其他静态网站托管部署vue项目时我发现不能访问具体表现为404报错，静态资源无法访问
-
+category: 前端
 tags:
- - vue打包
+ - vue
 published: 2024-05-31
 ---
 

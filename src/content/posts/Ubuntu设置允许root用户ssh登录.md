@@ -1,9 +1,10 @@
 ---
 title: Ubuntu设置允许root用户ssh登录
 description: Ubuntu设置允许root用户ssh登录
-#cover: /cover/cover2.png
+#image: /cover/cover2.png
+category: Linux
 tags:
- - Linux
+ - Ubuntu
  - ssh
 #sticky: 999
 published: 2025-09-19

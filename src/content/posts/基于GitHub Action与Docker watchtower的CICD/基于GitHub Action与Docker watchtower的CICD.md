@@ -2,7 +2,7 @@
 title: 基于GitHub Action与Docker watchtower的CI/CD
 sticky: 999
 description: 持续集成和持续交付/持续部署的实践能够提高开发效率、减少错误，并使团队能够更快地交付高质量的软件产品
-
+# category: 
 tags:
  - CI/CD
  - GitHub Action

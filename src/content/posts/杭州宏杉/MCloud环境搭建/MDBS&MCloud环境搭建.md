@@ -1,7 +1,7 @@
 ---
 title: MDBS&MCloud环境搭建笔记
 description: 杭州宏杉学习笔记-MDBS&MCloud环境搭建笔记
-#cover: /cover/cover2.png
+#image: /cover/cover2.png
 category: 杭州宏杉科技
 tags:
 - MCloud

@@ -1,7 +1,8 @@
 ---
 title: Go语言管道详解
 description: Go语言管道详解
-#cover: /cover/cover2.png
+#image: /cover/cover2.png
+category: GO
 tags:
  - Go 
 #sticky: 999

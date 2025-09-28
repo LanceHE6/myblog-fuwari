@@ -1,10 +1,10 @@
 ---
 title: ARP攻击与防护实验
 description: 使用华为eNSP模拟器搭建网络环境，使用Kali Linux虚拟机进行ARP攻击与防护实验。
-#cover: /cover/cover2.png
+image: ./image-20250410135702590.png
+category: 网络
 tags:
-- ARP欺骗
-  #sticky: 999
+- ARP
 published: 2025-04-10
 ---
 # ARP攻击与防护实验

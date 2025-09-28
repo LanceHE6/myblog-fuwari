@@ -1,7 +1,7 @@
 ---
 title: GCC编译器基本用法
 description: 介绍几种常用的gcc命令编译C语言程序的使用方法
-#cover: /cover/cover2.png
+#image: /cover/cover2.png
 tagss: [GCC]
 #sticky: 999
 published: 2025-01-14
