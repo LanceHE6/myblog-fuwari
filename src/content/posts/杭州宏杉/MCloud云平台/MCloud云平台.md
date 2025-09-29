@@ -19,28 +19,29 @@ published: 2025-08-04
 
   * 内部监控：内部监控agent获取CPU，内存，磁盘等数据
   * 在线修改配置：QGA实现的云主机与物理机之间的数据交互，不需要依赖网络
-      * 修改主机名
-      * 在线修改IP地址
-      * 在线修改MAC地址
-      * 修改云主机密码
-      * 同步配置（网卡IP地址，子网掩码，网关，DNS，MTU等）
+    * 修改主机名
+    * 在线修改IP地址
+    * 在线修改MAC地址
+    * 修改云主机密码
+    * 同步配置（网卡IP地址，子网掩码，网关，DNS，MTU等）
 
-  * 故障检测：要求云主机内部有`pvpanic`模块（`lsmod | grep pvpanic`)
+  * 故障检测：要求云主机内部有`pvpanic`模块(`lsmod | grep pvpanic`)
 
 * 3.系统镜像格式：
   * iso：光盘映像，通常通过光盘或USB引导启动，如操作系统安装盘。iso只读，无法直接修改
   * raw：原始的磁盘镜像，未经加工的裸磁盘格式（相应的性能也就比较高），接近物理磁盘，占用的空间与实际使用的空间一致
-  * qcow2（qemu copy-on-write)：一种虚拟化镜像格式，支持快照和加密
+  * qcow2(qemu copy-on-write)：一种虚拟化镜像格式，支持快照和加密
 
 * 4.关于云主机系统镜像（iso,raw,qcow2,vmdk）格式和主存储类型(mdbs,sharesan,sharedblock，local)与云主机根盘格式(raw,qcow2)有什么关系？
- 
+
  | 主存储类型                 | 镜像格式          | 根云盘格式      |
   |-----------------------|---------------|------------|
   | Local,NFS,SharedBlock | iso,qcow2,raw | qcow2/vmdk |
   | MStor,ShareSan| iso,raw       | raw        |
   | MStor,ShareSan| qcow2         | qcow2      |
-  * `local`，`nfs`(网络文件系统，文件共享)，`shareblock`类型的主存储，镜像**不论格式**，根云盘都为**qcow2**类型（对于local主存储，若用raw格式的镜像去创建云主机，根云盘会先为raw，最后转为qcow2。因为raw不支持快照等虚拟机的功能）
-  * `mdbs`和`sharesan`类型的主存储，则根系统镜像格式有关，若系统镜像为iso或raw格式，根云盘格式为raw；若系统镜像格式为qcow2，则根云盘格式为qcow2
+
+* `local`，`nfs`(网络文件系统，文件共享)，`shareblock`类型的主存储，镜像**不论格式**，根云盘都为**qcow2**类型（对于local主存储，若用raw格式的镜像去创建云主机，根云盘会先为raw，最后转为qcow2。因为raw不支持快照等虚拟机的功能）
+* `mdbs`和`sharesan`类型的主存储，则根系统镜像格式有关，若系统镜像为iso或raw格式，根云盘格式为raw；若系统镜像格式为qcow2，则根云盘格式为qcow2
 
 * 5.创建镜像中，本地上传和URL上传有什么区别？为什么URL上传会比本地上传快？
   * 本地上传：镜像文件会先上传到当前管理节点的临时路径下，随后再通过这个临时路径上传到镜像服务器
@@ -74,3 +75,5 @@ published: 2025-08-04
   * MCloud迁移：基于云平台的数据拷贝能力执行迁移，适用于通用场景，迁移时会占用云平台的计算资源，有一定耗时。不支持保留快照
   * MStor迁移：基于MStor主存储的跨池迁移卷功能实现数据快速迁移，仅适用于**源和目标位于同一MStor主存储**的迁移场景。支持保留快照
   * ShareSAN迁移：基于ShareSAN的NDM（Non-interrupt Data Migration，无中断数据迁移）功能实现数据快速迁移（ShareSAN需要有NDM License），仅适用于**源和目标位于同一ShareSAN主存储**的迁移场景。不支持保留快照
+
+* 18.未安装性能优化工具以及安装了性能优化工具的legacy云主机主板类型为**i440fx**，安装了性能优化工具的uefi云主机主板类型为**q35**.q35类型的主板不支持ide总线类型的根盘，会启动报错：`IDE controllers are unsupported for this QEMU binary or machine type`
