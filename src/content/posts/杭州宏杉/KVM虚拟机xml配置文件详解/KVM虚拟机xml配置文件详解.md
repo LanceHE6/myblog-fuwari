@@ -44,15 +44,15 @@ published: 2025-09-29
 ## 资源分配
 
 ```xml
-  <memory unit='KiB'>4194304</memory>
-  <currentMemory unit='KiB'>4194304</currentMemory>
-  <vcpu placement='static'>4</vcpu>
-  <cputune>
-    <shares>512</shares>
-  </cputune>
-  <resource>
-    <partition>/machine</partition>
-  </resource>
+<memory unit='KiB'>4194304</memory>
+<currentMemory unit='KiB'>4194304</currentMemory>
+<vcpu placement='static'>4</vcpu>
+<cputune>
+  <shares>512</shares>
+</cputune>
+<resource>
+  <partition>/machine</partition>
+</resource>
 ```
 
 * `<memory>`: 虚拟机最大可使用的内存大小（4GiB）。
