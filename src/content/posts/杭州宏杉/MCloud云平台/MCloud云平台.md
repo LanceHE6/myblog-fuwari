@@ -11,7 +11,11 @@ published: 2025-08-04
 
 * 1.性能优化工具包括：
 
-  * windows:内部监控Agent(用于获取云主机的CPU，内存和磁盘容量的监控数据)、QGA（云主机与宿主机交互的应用程序，不依赖网络）、Virtio驱动（优化云主机与宿主机的I/O性能，包括硬盘驱动,网卡驱动，内存驱动，pci设备驱动等）、Cloudbase-Init（win的初始化工具，实现导入UserData等定制功能）
+  * windows:
+    * 内部监控Agent：用于获取云主机的CPU，内存和磁盘容量的监控数据
+    * QGA：云主机与宿主机交互的应用程序，不依赖网络
+    * Virtio驱动：优化云主机与宿主机的I/O性能，包括硬盘驱动,网卡驱动，内存驱动，pci设备驱动等
+    * Cloudbase-Init：win的初始化工具，实现导入UserData等定制功能
 
   * linux：内部监控Agent，QGA
 
@@ -76,4 +80,20 @@ published: 2025-08-04
   * MStor迁移：基于MStor主存储的跨池迁移卷功能实现数据快速迁移，仅适用于**源和目标位于同一MStor主存储**的迁移场景。支持保留快照
   * ShareSAN迁移：基于ShareSAN的NDM（Non-interrupt Data Migration，无中断数据迁移）功能实现数据快速迁移（ShareSAN需要有NDM License），仅适用于**源和目标位于同一ShareSAN主存储**的迁移场景。不支持保留快照
 
-* 18.未安装性能优化工具以及安装了性能优化工具的legacy云主机主板类型为**i440fx**，安装了性能优化工具的uefi云主机主板类型为**q35**.q35类型的主板不支持ide总线类型的根盘，会启动报错：`IDE controllers are unsupported for this QEMU binary or machine type`
+* 18.未安装性能优化工具以及安装了性能优化工具的legacy云主机主板类型为**i440fx**，安装了性能优化工具的uefi云主机主板类型为**q35**.q35类型的主板不支持ide总线类型的云盘，会启动报错：`IDE controllers are unsupported for this QEMU binary or machine type`
+
+* 19.ide根盘的云主机在安装性能优化工具重启后，ide类型的盘会变为virtio类型的盘（报错根盘）
+
+* 20.云平台资源预留：
+
+  $$
+  集群可用CPU资源=（CPU总颗数*单颗CPU超线程数-(M+ 12*n)*1）*超分率 *0.8
+  $$
+
+  M为集群所有数据盘数，n为计算存储节点数
+  
+  $$
+  单节点可用内存 = 总内存 - 26GB  - 缓存分区数 * 2GB – 数据盘占用内存
+  $$
+
+  26GB为操作系统8GB+10GMDBS基础服务+8GMCloud云平台管理，数据盘占用=数据盘数*N（数据盘容量<=8TB,N=4GB，否则N=5GB）
