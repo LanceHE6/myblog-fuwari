@@ -108,6 +108,7 @@ published: 2025-09-29
 
 * `<loader>`: UEFI固件文件路径，readonly='yes'表示使用只读副本。
 * `<nvram>`: UEFI变量存储文件路径，基于模板创建。
+**legacy引导模式的虚拟机无上述两项标签**
 * `<bootmenu enable='yes'/>`: 启动时显示引导菜单。类似以下界面
 ![alt text](image-1.png)
 * `<smbios mode='sysinfo'/>`: 使用上面`<sysinfo>`标签中定义的SMBIOS信息。
@@ -139,7 +140,12 @@ published: 2025-09-29
 ```
 
 * `<cpu>`: 详细的CPU模拟配置。
-  * mode='custom' match='exact': 严格匹配自定义的CPU模型。
+  * mode='custom' match='exact': 严格匹配自定义的CPU模型。与云主机的设置的CPU模式有关
+    * 兼容模式：custom
+    * 物理机匹配模式：host-model
+    * 直通模式：host-passthrough
+    * 云平台修改CPU模式，兼容模式和物理机匹配模式在`/run/libvirt/qemu/UUID.xml`(使用dumpxml指令查看的也是该文件，该文件为云主机运行时的配置)均显示为`custom`；但云主机的实际配置`/etc/libvirt/qemu/UUID.xml`(该文件为云主机持久化的配置文件，也就是定义配置文件)正常显示为对应的模式；预配置的是host-model（模拟与宿主机CPU功能集兼容的虚拟CPU），但是实际启动的时候，会生成一个自定义CPU配置（即custom模式），其中包含与宿主机兼容的特性子集。如下图
+    ![alt text](image-2.png)
   * check='full': 进行完整的CPU特性兼容性检查。
 * `<model fallback='forbid'>qemu64</model>`: 使用qemu64基础CPU模型，如果主机不支持则禁止启动（fallback='forbid'）。
 * **`<topology>`: CPU拓扑结构**：1个插槽，4个核心，单线程。
