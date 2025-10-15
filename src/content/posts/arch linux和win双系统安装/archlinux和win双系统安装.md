@@ -28,6 +28,7 @@ published: 2025-10-15
 
 * 1.输入`iwctl`进入网络管理界面
 * 2.`device list` 列出无线网卡设备名，比如无线网卡 `wlan0`
+  * 如果设备的Powered字段为off，则需要启用无线设备。输入`rfkill unblock wifi`来解锁无线网卡
 * 3.`station wlan0 scan` 扫描网络
 * 4.`station wlan0 get-networks` 列出所有 wifi 网络
 * 5.`station wlan0 connect wifi-name` 进行连接，注意这里无法输入中文。回车后输入密码即可
@@ -56,7 +57,7 @@ ArchLinux至少需要如下3个分区
   ```shell
   mkfs.vfat -F32 /dev/nvme0n1p5
   mkswap /dev/nvme0n1p6
-  mkfs.ext4 /dev/nvme0n1p57
+  mkfs.ext4 /dev/nvme0n1p7
   ```   
   ![alt text](image-4.png)
 * 8.挂载根目录
@@ -114,6 +115,11 @@ ArchLinux至少需要如下3个分区
   ```
   * pacstrap: Arch Linux 的专用安装脚本，用于将软件包安装到指定目录
   * /mnt: 新系统的根目录挂载点
+
+  并让networkmanager开机自启动
+  ```shell
+  systemctl enable NetworkManager
+  ```
 
 * 3.生产`fstab`文件
   ```shell
@@ -174,6 +180,7 @@ ArchLinux至少需要如下3个分区
 
   若引导了 win10，则输出应该包含倒数第二行：
   ![alt text](image-12.png)
+
   没有也没关系，后面重启进入系统后再次生成配置文件即可
 
 * 9.配置语言和区域
