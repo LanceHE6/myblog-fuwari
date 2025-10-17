@@ -2,7 +2,7 @@
 title: ArchLinux和Win11双系统安装
 description: ArchLinux和Win11双系统安装
 #image: /cover/cover2.png
-category: linux
+category: Linux
 tags:
 - ArchLinux
   #sticky: 999
