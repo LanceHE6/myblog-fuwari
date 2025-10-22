@@ -82,6 +82,12 @@ published: 2025-07-30
   systemTag query tag~=overwrite sortBy=createDate sortDirection=desc resourceUuid=原云主机云盘uuid
   ```
 
+* 开启混盘配置（根盘和数据盘可以跨主存储）
+
+  ```shell
+  globalConfig update category=vm name=attach.mixed.volume value=true
+  ```
+
 ## virsh
 
 * 列出运行中的云主机
