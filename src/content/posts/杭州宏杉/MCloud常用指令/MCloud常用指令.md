@@ -88,6 +88,12 @@ published: 2025-07-30
   globalConfig update category=vm name=attach.mixed.volume value=true
   ```
 
+* 关机修改云主机计算规格
+
+  ```shell
+  vm changeOffering instanceOfferingUuid=(计算规格uuid) vmInstanceUuid=(云主机uuid)
+  ```
+
 ## virsh
 
 * 列出运行中的云主机
