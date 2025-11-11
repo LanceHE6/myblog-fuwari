@@ -10,6 +10,46 @@ tags:
 published: 2025-07-30
 ---
 
+## mcloud-bin
+
+* 获取mcloud服务运行状态及版本信息
+
+```shell
+mcloud-bin status
+```
+
+* 启动、重启、停止mcloud服务
+
+```shell
+mcloud-bin start
+mcloud-bin restart
+mcloud-bin stop
+```
+
+* 检查管理节点数据库状态(检查双管理节点数据库不一致)
+
+```shell
+mcloud-bin db-stauts
+```
+
+![alt text](image.png)
+
+* 查看mcloud配置
+
+```shell
+mcloud-bin show_configuration
+```
+
+![alt text](image-1.png)
+
+* 修改mcloud配置（修改配置后需重启所有管理节点的mcloud服务）
+
+```shell
+mcloud-bin configure [配置名]=[value]
+# 例如修改从管理节点的ssh端口
+mcloud-bin configure peer.sshPort=20023
+```
+
 ## mcloud-cli
 
 * 登录（若未做特殊声明，下述的指令均为在登录的基础上执行）：
@@ -125,3 +165,16 @@ virsh edit [UUID]
 ```shell
 virsh domjobinfo 云主机uuid
 ```
+
+## SAN
+
+* 查询SAN设备HA状态
+
+```shell
+# 进入odsp-cli
+/odsp/bin/odsp-cli
+# 获取高可用状态
+ha mgt getstatus
+```
+
+![alt text](1.png)
