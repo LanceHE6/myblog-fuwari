@@ -134,6 +134,65 @@ mcloud-bin configure peer.sshPort=20023
   vm changeOffering instanceOfferingUuid=(计算规格uuid) vmInstanceUuid=(云主机uuid)
   ```
 
+* 查询云主机
+
+  ```shell
+  vm query uuid=[云主机uuid]
+  ```
+
+![alt text](image-2.png)
+
+  通过查询云主机，可以获取到云主机的硬盘的vid（installpath:mstor://Pool-2/2/**21**），对应wwn：600b342d430615785202de**0000000021**。可在mdbs上直接搜索wwn后几位的vid搜索到卷
+
+![alt text](image-3.png)
+
+  云盘更改主存储后，SAN对应的lun名称/mdbs对应卷名称都会改变，查询更改后的名称也可以通过上述方法查询
+
+## MDBS CLI
+
+* 登录
+  
+  ```shell
+  # 元数据节点
+  mcli
+  ```
+
+* 通过卷的uuid查询卷信息
+
+  ```shell
+  volume mgt query --name [uuid]
+  
+  mdbs> volume mgt query --name fcf4563947634cfab5edf4fc87273760
+  Command succeed.
+  =================================================
+  name:fcf4563947634cfab5edf4fc87273760 # name即对应uuid
+  vid:133 # 对应卷installpath: mstor://Pool-2/2/133
+  capacity(MB):40960
+  used_cap(MB):3268.0
+  size_kbyte:41943040
+  used_kbyte:3346432
+  status:0
+  qos:0
+  pid:2 # 对应卷installpath: mstor://Pool-2/2/133
+  stripe_size(KB):64
+  stripe_width:2
+  strategy_id: 0
+  related_snap: NA
+  lun_type: clone
+  rcache: 1
+  master_proxy: 1
+  snap_num: 0
+  use_type: AP
+  create_timestamp: 2025-11-14T16:05:30.497+08:00
+  delete_timestamp: 0
+  wwn: 600b342d4306157852fd580000000133 # 0000000133对应vid
+  sn: 00b342d43061578528fd580000000133
+  nguid: d43061578528fd5800b3420000000133
+  mr_rate: 0
+  verify: 0
+  desc: N/A
+  ```
+
 ## virsh
 
 * 列出运行中的云主机
