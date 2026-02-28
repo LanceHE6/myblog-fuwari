@@ -2,8 +2,9 @@
 
 ## 自建
 
-* [程序员做饭指南](https://how2cook.hycer.cn/)
 * [Linux命令查询](https://linux.hycer.cn/)
+* [程序员做饭指南](https://h2c.hycer.cn/)
+* [今天吃神马](https://w2e.hycer.cn/)
 
 ## 其他
 
