@@ -6,7 +6,7 @@ category: 网络
 tags:
 - Cloudflare
   #sticky: 999
-published: 2026-3-3
+published: 2026-03-03
 ---
 
 # Cloudflare Tunnel优选域名加速
