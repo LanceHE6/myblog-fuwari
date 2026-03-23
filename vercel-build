@@ -1,0 +1,17 @@
+#!/bin/bash
+set -e
+
+# 安装依赖
+pnpm install && pnpm add sharp
+
+# 执行 Astro 构建
+pnpm run astro build
+
+# 执行 Pagefind 索引构建
+pnpm run pagefind --site dist
+
+# 确保 Pagefind 文件夹被拷贝到 Vercel 输出目录
+if [ -d "dist/pagefind" ]; then
+  mkdir -p .vercel/output/static/pagefind
+  cp -r dist/pagefind/* .vercel/output/static/pagefind/
+fi
