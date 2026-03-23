@@ -129,4 +129,4 @@ source ~/.zshrc
 
 如果配置不满意可以使用`p10k configure`重新进入配置引导
 
-**另外因为更换了shell所以原来位于`/etc/profile`或`.bashrc`的环境变量需要转移到`.zshrc中`**
+**另外因为更换了shell所以原来位于`.bashrc`的环境变量需要转移到`.zshrc中`**
