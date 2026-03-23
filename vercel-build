@@ -8,7 +8,7 @@ pnpm install && pnpm add sharp
 pnpm run astro build
 
 # 执行 Pagefind 索引构建
-pnpm run pagefind --site dist
+npx pagefind --source dist
 
 # 确保 Pagefind 文件夹被拷贝到 Vercel 输出目录
 if [ -d "dist/pagefind" ]; then
