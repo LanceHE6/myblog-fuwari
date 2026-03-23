@@ -117,7 +117,10 @@ export default defineConfig({
           parseDirectiveNode,
       ],
       rehypePlugins: [
-          rehypeKatex,
+          [rehypeKatex, {
+            strict: 'ignore', // 关闭严格模式，消除中文字符警告
+            trust: true
+            }],
           rehypeSlug,
           [
               rehypeComponents,
