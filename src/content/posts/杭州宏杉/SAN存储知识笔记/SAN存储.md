@@ -1,8 +1,8 @@
 ---
 title: SAN存储知识
-description: 杭州宏杉学习笔记-SAN存储知识笔记
+description: 工作学习笔记-SAN存储知识笔记
 image: ./images/image-2.png
-category: 杭州宏杉科技
+category: 工作
 tags:
 - 存储
 - SAN

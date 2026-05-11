@@ -2,7 +2,7 @@
 title: KVM虚拟机xml配置文件详解
 description: 杭州宏杉学习笔记-KVM虚拟机xml配置文件详解
 image: ./cover.png
-category: 杭州宏杉科技
+category: 工作
 tags:
 - 虚拟机
 - KVM

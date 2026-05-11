@@ -1,8 +1,8 @@
 ---
 title: MSTE教材学习
-description: 杭州宏杉学习笔记-MSTE教材学习
+description: 工作学习笔记-MSTE教材学习
 #image: /cover/cover2.png
-category: 杭州宏杉科技
+category: 工作
 tags:
 - MSTE
   #sticky: 999

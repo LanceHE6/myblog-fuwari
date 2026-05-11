@@ -1,12 +1,10 @@
 ---
 title: MCloud对接MDBS开局指导书笔记
-description: 杭州宏杉学习笔记-MCloud对接MDBS开局指导书V1.12
+description: 工作学习笔记-MCloud对接MDBS开局指导书V1.12
 image: ./images/image.png
-category: 杭州宏杉科技
+category: 工作
 tags:
-- MCloud
-- MDBS
-- 开局指导
+- 云平台
   #sticky: 999
 published: 2025-07-11
 ---

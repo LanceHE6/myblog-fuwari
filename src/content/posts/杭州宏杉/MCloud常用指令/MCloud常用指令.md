@@ -1,10 +1,9 @@
 ---
-title: MCloud常用指令
-description: 杭州宏杉学习笔记-MCloud常用指令
+title: 云平台常用指令
+description: 工作学习笔记-云平台常用指令
 #image: /cover/cover2.png
-category: 杭州宏杉科技
+category: 工作
 tags:
-- MCloud
 - Cli
   #sticky: 999
 published: 2025-07-30

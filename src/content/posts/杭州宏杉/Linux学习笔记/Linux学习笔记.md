@@ -2,7 +2,7 @@
 title: Linux学习笔记
 description: 杭州宏杉Linux学习笔记
 image: ./images/image2.png
-category: 杭州宏杉科技
+category: 工作
 tags:
 - Linux
   #sticky: 999

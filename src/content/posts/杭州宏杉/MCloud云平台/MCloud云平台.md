@@ -1,8 +1,8 @@
 ---
-title: MCloud云平台
-description: 杭州宏杉学习笔记-MCloud云平台相关功能和知识
+title: 云平台
+description: 工作学习笔记-云平台相关功能和知识
 #image: /cover/cover2.png
-category: 杭州宏杉科技
+category: 工作
 tags:
 - MCloud
   #sticky: 999

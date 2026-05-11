@@ -1,8 +1,8 @@
 ---
 title: nfs搭建
-description: 杭州宏杉学习笔记-nfs搭建
+description: 工作学习笔记-nfs搭建
 #image: /cover/cover2.png
-category: 杭州宏杉科技
+category: 工作
 tags:
 - nfs
   #sticky: 999

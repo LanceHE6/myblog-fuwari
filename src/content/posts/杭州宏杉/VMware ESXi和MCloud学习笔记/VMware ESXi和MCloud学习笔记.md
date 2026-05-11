@@ -1,11 +1,11 @@
 ---
-title: VMware ESXi和MCloud学习笔记
-description: 杭州宏杉学习笔记-VMware ESXi和MCloud学习笔记
+title: VMware ESXi和云平台学习笔记
+description: 工作学习笔记-VMware ESXi和云平台学习笔记
 #image: /cover/cover2.png
 category: 杭州宏杉科技
 tags:
 - ESXi
-- MCloud
+- 云平台
 - 虚拟机
   #sticky: 999
 published: 2025-07-11
