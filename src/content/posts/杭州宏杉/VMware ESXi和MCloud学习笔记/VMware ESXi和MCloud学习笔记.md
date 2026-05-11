@@ -2,7 +2,7 @@
 title: VMware ESXi和云平台学习笔记
 description: 工作学习笔记-VMware ESXi和云平台学习笔记
 #image: /cover/cover2.png
-category: 杭州宏杉科技
+category: 工作
 tags:
 - ESXi
 - 云平台
