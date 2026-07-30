@@ -244,4 +244,3 @@ rules:
 3. **服务重启或查看日志命令**：
     * 查看实时日志：`journalctl -u xray -f`
     * 重启服务：`systemctl restart xray`
-```
