@@ -44,7 +44,7 @@ apt update && apt upgrade -y
 apt install -y curl wget tar jq openssl
 
 # 3. 执行 Xray 官方安装脚本
-bash <(curl -L [https://github.com/XTLS/Xray-install/raw/main/install-release.sh](https://github.com/XTLS/Xray-install/raw/main/install-release.sh))
+bash <(curl -L https://github.com/XTLS/Xray-install/raw/main/install-release.sh)
 ```
 
 安装成功后，Xray 会被注册为系统服务，主配置文件路径为 `/usr/local/etc/xray/config.json`。
@@ -114,10 +114,10 @@ vim /usr/local/etc/xray/config.json
         "security": "reality",
         "realitySettings": {
           "show": false,
-          "dest": "[www.apple.com:443](https://www.apple.com:443)",
+          "dest": "https://www.apple.com:443",
           "xver": 0,
           "serverNames": [
-            "[www.apple.com](https://www.apple.com)"
+            "https://www.apple.com"
           ],
           "privateKey": "你的Private_Key",
           "shortIds": [
@@ -202,7 +202,7 @@ proxies:
     udp: true
     tls: true
     flow: xtls-rprx-vision
-    servername: [www.apple.com](https://www.apple.com)        # 伪装域名 (SNI)
+    servername: https://www.apple.com       # 伪装域名 (SNI)
     network: tcp
     reality-opts:
       public-key: 你的PublicKey       # 替换为 Public Key (公钥)
